@@ -107,9 +107,7 @@
   .ingredient-pill:hover { background:rgba(201,168,76,0.12); color:var(--gold-light); }
 
   .owls-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; }
-  .owl-result { background:linear-gradient(135deg,rgba(201,168,76,0.05),rgba(201,168,76,0.02)); border:1px solid rgba(201,168,76,0.2); border-radius:4px; padding:28px; display:flex; align-items:center; gap:20px; opacity:0; transform:translateY(20px); transition:all 0.5s ease; }
-  .owl-result.visible { opacity:1; transform:translateY(0); }
-  .owl-result { cursor: pointer; }
+  .owl-result { background:linear-gradient(135deg,rgba(201,168,76,0.05),rgba(201,168,76,0.02)); border:1px solid rgba(201,168,76,0.2); border-radius:4px; padding:28px; display:flex; align-items:center; gap:20px; opacity:1; cursor:pointer; transition:border-color 0.3s, box-shadow 0.3s, transform 0.3s; }
   .owl-result:hover { border-color:rgba(201,168,76,0.5); box-shadow:0 0 20px rgba(201,168,76,0.1); transform:translateY(-2px); }
   .owl-seal { width:52px; height:52px; flex-shrink:0; background:radial-gradient(circle at 40% 40%,rgba(201,168,76,0.3),rgba(201,168,76,0.1)); border:1px solid rgba(201,168,76,0.3); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:24px; }
   .owl-title { font-family:'Cinzel',serif; font-size:14px; font-weight:700; color:var(--gold-light); margin-bottom:4px; letter-spacing:0.5px; line-height:1.3; }
