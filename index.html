@@ -7,22 +7,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0d0a06;
-    --parchment: #f4e4c1;
-    --gold: #c9a84c;
-    --gold-light: #f0d080;
-    --gold-dim: #8a6f2e;
-    --crimson: #8b0000;
-    --crimson-light: #c41e3a;
-    --dark-wood: #1a0f05;
-    --stone: #2a2520;
-    --text-light: #f4e4c1;
-    --text-dim: #b8a070;
+    --bg: #0d0a06; --parchment: #f4e4c1; --gold: #c9a84c; --gold-light: #f0d080;
+    --gold-dim: #8a6f2e; --crimson: #8b0000; --crimson-light: #c41e3a;
+    --dark-wood: #1a0f05; --text-light: #f4e4c1; --text-dim: #b8a070;
     --border: rgba(201,168,76,0.25);
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior: smooth; }
-  body { background: var(--bg); color: var(--text-light); font-family: 'Crimson Text', serif; overflow-x: hidden; cursor: none; }
+  body { background:var(--bg); color:var(--text-light); font-family:'Crimson Text',serif; overflow-x:hidden; cursor:none; }
 
   .wand { position:fixed; pointer-events:none; z-index:9999; width:32px; height:32px; transform:translate(-50%,-50%); }
   .magic-trail { position:fixed; pointer-events:none; z-index:9998; width:6px; height:6px; border-radius:50%; background:var(--gold-light); box-shadow:0 0 8px var(--gold-light),0 0 16px var(--gold); transform:translate(-50%,-50%); transition:all 0.2s ease; }
@@ -91,12 +83,12 @@
   .project-scroll::after { bottom:12px; right:12px; }
   .project-scroll:hover { border-color:rgba(201,168,76,0.4); box-shadow:0 0 40px rgba(201,168,76,0.07); }
   .project-chapter { font-family:'IM Fell English',serif; font-style:italic; font-size:12px; color:var(--gold-dim); letter-spacing:2px; margin-bottom:12px; }
-  .project-title { font-family:'Cinzel',serif; font-size:20px; font-weight:700; color:var(--gold-light); margin-bottom:16px; letter-spacing:1px; line-height:1.2; }
+  .project-title { font-family:'Cinzel',serif; font-size:20px; font-weight:700; color:var(--gold-light); margin-bottom:16px; letter-spacing:1px; }
   .project-desc { font-family:'Crimson Text',serif; font-size:16px; color:var(--text-dim); line-height:1.8; margin-bottom:24px; }
   .project-ingredients { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px; }
   .ingredient { background:rgba(139,0,0,0.15); border:1px solid rgba(196,30,58,0.25); border-radius:2px; padding:4px 10px; font-family:'IM Fell English',serif; font-style:italic; font-size:12px; color:#c47a7a; }
   .project-link { display:inline-flex; align-items:center; gap:10px; font-family:'Cinzel',serif; font-size:11px; color:var(--gold); text-decoration:none; letter-spacing:2px; text-transform:uppercase; transition:all 0.3s; }
-  .project-link:hover { color:var(--gold-light); text-shadow:0 0 10px rgba(201,168,76,0.5); gap:14px; }
+  .project-link:hover { color:var(--gold-light); gap:14px; }
 
   .skills-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; }
   .potion-bottle { background:linear-gradient(135deg,rgba(26,15,5,0.8),rgba(13,10,6,0.9)); border:1px solid rgba(201,168,76,0.15); border-radius:4px; padding:28px; opacity:0; transform:translateY(20px); transition:all 0.5s ease; }
@@ -107,11 +99,13 @@
   .ingredient-pill:hover { background:rgba(201,168,76,0.12); color:var(--gold-light); }
 
   .owls-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; }
-  .owl-result { background:linear-gradient(135deg,rgba(201,168,76,0.05),rgba(201,168,76,0.02)); border:1px solid rgba(201,168,76,0.2); border-radius:4px; padding:28px; display:flex; align-items:center; gap:20px; opacity:0; transform:translateY(20px); transition:all 0.5s ease; }
+  .owl-result { background:linear-gradient(135deg,rgba(201,168,76,0.05),rgba(201,168,76,0.02)); border:1px solid rgba(201,168,76,0.2); border-radius:4px; padding:28px; display:flex; align-items:center; gap:20px; text-decoration:none; color:inherit; opacity:0; transform:translateY(20px); transition:all 0.5s ease; }
   .owl-result.visible { opacity:1; transform:translateY(0); }
+  .owl-result:hover { border-color:rgba(201,168,76,0.5); box-shadow:0 0 20px rgba(201,168,76,0.1); transform:translateY(-2px); }
   .owl-seal { width:52px; height:52px; flex-shrink:0; background:radial-gradient(circle at 40% 40%,rgba(201,168,76,0.3),rgba(201,168,76,0.1)); border:1px solid rgba(201,168,76,0.3); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:24px; }
   .owl-title { font-family:'Cinzel',serif; font-size:14px; font-weight:700; color:var(--gold-light); margin-bottom:4px; letter-spacing:0.5px; line-height:1.3; }
-  .owl-issuer { font-family:'IM Fell English',serif; font-style:italic; font-size:13px; color:var(--text-dim); }
+  .owl-issuer { font-family:'IM Fell English',serif; font-style:italic; font-size:13px; color:var(--text-dim); margin-bottom:6px; }
+  .owl-link-text { font-family:'Cinzel',serif; font-size:10px; color:var(--gold-dim); letter-spacing:1px; text-transform:uppercase; }
 
   .contact-section { background:var(--dark-wood); border-top:1px solid rgba(201,168,76,0.15); text-align:center; padding:100px 60px; position:relative; overflow:hidden; }
   .contact-title { font-family:'Cinzel',serif; font-size:clamp(36px,5vw,64px); font-weight:900; letter-spacing:4px; color:var(--gold); text-shadow:0 0 40px rgba(201,168,76,0.2); margin-bottom:16px; }
@@ -124,8 +118,7 @@
   footer p { font-family:'IM Fell English',serif; font-style:italic; font-size:13px; color:var(--text-dim); }
 
   @media(max-width:768px){
-    nav{padding:14px 24px}
-    .nav-links{display:none}
+    nav{padding:14px 24px} .nav-links{display:none}
     .hero,.contact-section{padding:100px 24px 60px}
     section{padding:60px 24px}
     .exp-item{grid-template-columns:1fr;gap:16px}
@@ -157,6 +150,7 @@
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
     <div class="sorting-tag">✦ The Sorting Hat has spoken ✦</div>
@@ -177,6 +171,7 @@
   </div>
 </section>
 
+<!-- EXPERIENCE -->
 <section id="experience" class="parchment-bg">
   <div class="section-eyebrow">The Chronicle</div>
   <h2 class="section-title">Professional History</h2>
@@ -192,8 +187,8 @@
         <ul class="exp-points">
           <li>Crafted 10+ DDL & transformation scripts in Databricks, casting end-to-end ETL pipelines across Bronze and Silver layers.</li>
           <li>Enchanted S3 file ingestion with dynamic date-based unzipping spell, reducing manual effort by 80%.</li>
-          <li>Implemented Medallion Architecture (Bronze→Silver→Gold) using PySpark and Delta Lake.</li>
-          <li>Conjured Snowflake data warehouse with Star Schema modeling, optimizing query performance by ~25%.</li>
+          <li>Implemented Medallion Architecture (Bronze to Silver to Gold) using PySpark and Delta Lake.</li>
+          <li>Conjured Snowflake data warehouse with Star Schema modeling, optimizing query performance by 25%.</li>
           <li>Maintained STTM scrolls across 10+ data entities for lineage and audit readiness.</li>
         </ul>
         <div class="spell-tags">
@@ -211,7 +206,7 @@
         <div class="exp-role">SDE Intern — RBS-ML Team</div>
         <ul class="exp-points">
           <li>Apprenticed on CAM — an AI oracle converting customer whispers into actionable product insights.</li>
-          <li>Improved CI/CD potions with 30% higher test coverage using pytest/unittest.</li>
+          <li>Improved CI/CD potions with 30% higher test coverage using pytest and unittest.</li>
           <li>Banished OOM dementors by migrating integration tests from Lambda to Fargate.</li>
         </ul>
         <div class="spell-tags">
@@ -222,6 +217,7 @@
   </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects">
   <div class="section-eyebrow">The Spellbook</div>
   <h2 class="section-title">Featured Projects</h2>
@@ -247,29 +243,41 @@
   </div>
 </section>
 
+<!-- SKILLS -->
 <section id="skills" class="parchment-bg">
   <div class="section-eyebrow">Potions Class</div>
   <h2 class="section-title">Magical Abilities</h2>
   <div class="skills-grid">
     <div class="potion-bottle"><div class="potion-label">🧪 Core Data Engineering</div><div class="ingredients-list"><span class="ingredient-pill">Databricks</span><span class="ingredient-pill">PySpark</span><span class="ingredient-pill">Delta Lake</span><span class="ingredient-pill">ETL/ELT</span><span class="ingredient-pill">Medallion Arch.</span></div></div>
     <div class="potion-bottle"><div class="potion-label">❄️ Data Warehousing</div><div class="ingredients-list"><span class="ingredient-pill">Snowflake</span><span class="ingredient-pill">Star Schema</span><span class="ingredient-pill">Data Modeling</span><span class="ingredient-pill">OLAP</span><span class="ingredient-pill">DBT</span></div></div>
-    <div class="potion-bottle"><div class="potion-label">📜 Spells & Languages</div><div class="ingredients-list"><span class="ingredient-pill">Python</span><span class="ingredient-pill">SQL (Advanced)</span><span class="ingredient-pill">PL/SQL</span><span class="ingredient-pill">Pandas</span><span class="ingredient-pill">NumPy</span></div></div>
+    <div class="potion-bottle"><div class="potion-label">📜 Spells and Languages</div><div class="ingredients-list"><span class="ingredient-pill">Python</span><span class="ingredient-pill">SQL (Advanced)</span><span class="ingredient-pill">PL/SQL</span><span class="ingredient-pill">Pandas</span><span class="ingredient-pill">NumPy</span></div></div>
     <div class="potion-bottle"><div class="potion-label">☁️ Sky Realms (Cloud)</div><div class="ingredients-list"><span class="ingredient-pill">AWS S3</span><span class="ingredient-pill">Lambda</span><span class="ingredient-pill">Fargate</span><span class="ingredient-pill">OCI</span><span class="ingredient-pill">Snowflake Cloud</span></div></div>
     <div class="potion-bottle"><div class="potion-label">⚙️ Dark Arts (Tools)</div><div class="ingredients-list"><span class="ingredient-pill">Git</span><span class="ingredient-pill">CI/CD</span><span class="ingredient-pill">Agile</span><span class="ingredient-pill">STTM Docs</span><span class="ingredient-pill">SDLC</span></div></div>
     <div class="potion-bottle"><div class="potion-label">🏛️ Ancient Runes (CS)</div><div class="ingredients-list"><span class="ingredient-pill">DSA</span><span class="ingredient-pill">DBMS</span><span class="ingredient-pill">System Design</span><span class="ingredient-pill">OOPs</span><span class="ingredient-pill">Networking</span></div></div>
   </div>
 </section>
 
+<!-- CERTIFICATIONS -->
 <section style="padding-top:0">
   <div class="section-eyebrow">Academic Records</div>
-  <h2 class="section-title">O.W.L.s & N.E.W.T.s</h2>
+  <h2 class="section-title">O.W.L.s and N.E.W.T.s</h2>
   <div class="owls-grid">
-    <div class="owl-result"><div class="owl-seal">🔶</div><div><div class="owl-title">Databricks Certified Data Engineer Associate</div><div class="owl-issuer">Issued by the Databricks Academy</div></div></div>
-    <div class="owl-result"><div class="owl-seal">❄️</div><div><div class="owl-title">SnowPro Core Certification</div><div class="owl-issuer">Issued by the Snowflake Guild</div></div></div>
-    <div class="owl-result"><div class="owl-seal">☁️</div><div><div class="owl-title">Oracle Certified Foundations Associate</div><div class="owl-issuer">Issued by Oracle Order</div></div></div>
+    <a href="https://credentials.databricks.com/dd0516f7-7150-4c81-9be3-c1751d81df58#acc.ZI1vesAy" target="_blank" class="owl-result">
+      <div class="owl-seal">🔶</div>
+      <div><div class="owl-title">Databricks Certified Data Engineer Associate</div><div class="owl-issuer">Issued by the Databricks Academy</div><div class="owl-link-text">🔗 View Certificate →</div></div>
+    </a>
+    <a href="https://achieve.snowflake.com/f5d76bcc-1170-42de-986e-3f54abe4747e#acc.smq2TNCR" target="_blank" class="owl-result">
+      <div class="owl-seal">❄️</div>
+      <div><div class="owl-title">SnowPro Core Certification</div><div class="owl-issuer">Issued by the Snowflake Guild</div><div class="owl-link-text">🔗 View Certificate →</div></div>
+    </a>
+    <a href="https://drive.google.com/file/d/166aD-i8VKSp193klbV49gQZK-ezBfZ5W/view?usp=drive_link" target="_blank" class="owl-result">
+      <div class="owl-seal">☁️</div>
+      <div><div class="owl-title">Oracle Certified Foundations Associate</div><div class="owl-issuer">Issued by Oracle Order</div><div class="owl-link-text">🔗 View Certificate →</div></div>
+    </a>
   </div>
 </section>
 
+<!-- CONTACT -->
 <div class="contact-section" id="contact">
   <div class="section-eyebrow" style="justify-content:center">Owl Post Office</div>
   <h2 class="contact-title">Send an Owl 🦉</h2>
@@ -287,61 +295,70 @@
 </footer>
 
 <script>
+  // Wand cursor
   const wand = document.getElementById('wand');
   const trail = document.getElementById('trail');
-  let mx=0,my=0,tx=0,ty=0;
-
-  document.addEventListener('mousemove',(e)=>{
+  let mx=0, my=0, tx=0, ty=0;
+  document.addEventListener('mousemove', (e) => {
     mx=e.clientX; my=e.clientY;
-    wand.style.left=mx+'px'; wand.style.top=my+'px';
-    if(Math.random()>0.6) spawnSparkle(mx,my);
+    wand.style.left = mx + 'px';
+    wand.style.top = my + 'px';
+    if (Math.random() > 0.6) spawnSparkle(mx, my);
   });
+  function animateCursor() {
+    tx += (mx - tx - 3) * 0.1;
+    ty += (my - ty - 3) * 0.1;
+    trail.style.left = tx + 'px';
+    trail.style.top = ty + 'px';
+    requestAnimationFrame(animateCursor);
+  }
+  animateCursor();
 
-  function animate(){
-    tx+=(mx-tx-3)*0.1; ty+=(my-ty-3)*0.1;
-    trail.style.left=tx+'px'; trail.style.top=ty+'px';
-    requestAnimationFrame(animate);
-  } animate();
-
-  function spawnSparkle(x,y){
-    const s=document.createElement('div');
-    const dx=(Math.random()-0.5)*40, dy=-(10+Math.random()*30);
-    s.style.cssText=`position:fixed;pointer-events:none;z-index:9997;width:4px;height:4px;border-radius:50%;background:${Math.random()>0.5?'#f0d080':'#c9a84c'};left:${x+(Math.random()-0.5)*20}px;top:${y+(Math.random()-0.5)*20}px;box-shadow:0 0 6px #f0d080;transition:all 0.6s ease;`;
+  function spawnSparkle(x, y) {
+    const s = document.createElement('div');
+    const dx = (Math.random()-0.5)*40, dy = -(10+Math.random()*30);
+    s.style.cssText = 'position:fixed;pointer-events:none;z-index:9997;width:4px;height:4px;border-radius:50%;background:' + (Math.random()>0.5?'#f0d080':'#c9a84c') + ';left:' + (x+(Math.random()-0.5)*20) + 'px;top:' + (y+(Math.random()-0.5)*20) + 'px;box-shadow:0 0 6px #f0d080;transition:all 0.6s ease;';
     document.body.appendChild(s);
-    requestAnimationFrame(()=>{ s.style.transform=`translate(${dx}px,${dy}px) scale(0)`; s.style.opacity='0'; });
-    setTimeout(()=>s.remove(),600);
+    requestAnimationFrame(() => { s.style.transform = 'translate('+dx+'px,'+dy+'px) scale(0)'; s.style.opacity = '0'; });
+    setTimeout(() => s.remove(), 600);
   }
 
   // Stars
-  const starsEl=document.getElementById('stars');
-  for(let i=0;i<120;i++){
-    const star=document.createElement('div');
-    star.className='star';
-    star.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*4}s;opacity:${0.1+Math.random()*0.4};`;
+  const starsEl = document.getElementById('stars');
+  for (let i=0; i<120; i++) {
+    const star = document.createElement('div');
+    star.className = 'star';
+    star.style.cssText = 'left:' + (Math.random()*100) + '%;top:' + (Math.random()*100) + '%;--dur:' + (2+Math.random()*4) + 's;--delay:' + (Math.random()*4) + 's;opacity:' + (0.1+Math.random()*0.4) + ';';
     starsEl.appendChild(star);
   }
 
   // Candles
-  const candlesEl=document.getElementById('candles');
-  [8,18,28,38,48,58,68,78,88,95].forEach((left)=>{
-    const c=document.createElement('div');
-    c.className='candle';
-    c.style.cssText=`left:${left}%;top:${5+Math.random()*15}%;--cd:${3+Math.random()*3}s;--cdel:${Math.random()*2}s;`;
-    c.innerHTML='<div class="candle-flame"></div><div class="candle-body"></div>';
+  const candlesEl = document.getElementById('candles');
+  [8,18,28,38,48,58,68,78,88,95].forEach((left) => {
+    const c = document.createElement('div');
+    c.className = 'candle';
+    c.style.cssText = 'left:' + left + '%;top:' + (5+Math.random()*15) + '%;--cd:' + (3+Math.random()*3) + 's;--cdel:' + (Math.random()*2) + 's;';
+    c.innerHTML = '<div class="candle-flame"></div><div class="candle-body"></div>';
     candlesEl.appendChild(c);
   });
 
-  // Scroll progress
-  const scrollLine=document.getElementById('scrollLine');
-  window.addEventListener('scroll',()=>{
-    scrollLine.style.width=(window.scrollY/(document.body.scrollHeight-window.innerHeight)*100)+'%';
+  // Scroll progress bar
+  const scrollLine = document.getElementById('scrollLine');
+  window.addEventListener('scroll', () => {
+    const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
+    scrollLine.style.width = pct + '%';
   });
 
-  // Reveal
-  const observer=new IntersectionObserver((entries)=>{
-    entries.forEach((e,i)=>{ if(e.isIntersecting) setTimeout(()=>e.target.classList.add('visible'),i*120); });
-  },{threshold:0.1});
-  document.querySelectorAll('.exp-item,.project-scroll,.potion-bottle,.owl-result').forEach(el=>observer.observe(el));
+  // Scroll reveal animation
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 120);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.exp-item, .project-scroll, .potion-bottle, .owl-result').forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
