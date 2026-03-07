@@ -107,13 +107,11 @@
   .ingredient-pill:hover { background:rgba(201,168,76,0.12); color:var(--gold-light); }
 
   .owls-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; }
-  .owl-result { background:linear-gradient(135deg,rgba(201,168,76,0.05),rgba(201,168,76,0.02)); border:1px solid rgba(201,168,76,0.2); border-radius:4px; padding:28px; display:flex; align-items:center; gap:20px; opacity:1; cursor:pointer; transition:border-color 0.3s, box-shadow 0.3s, transform 0.3s; }
-  .owl-result:hover { border-color:rgba(201,168,76,0.5); box-shadow:0 0 20px rgba(201,168,76,0.1); transform:translateY(-2px); }
+  .owl-result { background:linear-gradient(135deg,rgba(201,168,76,0.05),rgba(201,168,76,0.02)); border:1px solid rgba(201,168,76,0.2); border-radius:4px; padding:28px; display:flex; align-items:center; gap:20px; opacity:0; transform:translateY(20px); transition:all 0.5s ease; }
+  .owl-result.visible { opacity:1; transform:translateY(0); }
   .owl-seal { width:52px; height:52px; flex-shrink:0; background:radial-gradient(circle at 40% 40%,rgba(201,168,76,0.3),rgba(201,168,76,0.1)); border:1px solid rgba(201,168,76,0.3); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:24px; }
   .owl-title { font-family:'Cinzel',serif; font-size:14px; font-weight:700; color:var(--gold-light); margin-bottom:4px; letter-spacing:0.5px; line-height:1.3; }
-  .owl-issuer { font-family:'IM Fell English',serif; font-style:italic; font-size:13px; color:var(--text-dim); margin-bottom:8px; }
-  .owl-link { font-family:'Cinzel',serif; font-size:10px; color:var(--gold-dim); letter-spacing:1px; text-transform:uppercase; text-decoration:none; transition:color 0.2s; }
-  .owl-link:hover { color:var(--gold-light); }
+  .owl-issuer { font-family:'IM Fell English',serif; font-style:italic; font-size:13px; color:var(--text-dim); }
 
   .contact-section { background:var(--dark-wood); border-top:1px solid rgba(201,168,76,0.15); text-align:center; padding:100px 60px; position:relative; overflow:hidden; }
   .contact-title { font-family:'Cinzel',serif; font-size:clamp(36px,5vw,64px); font-weight:900; letter-spacing:4px; color:var(--gold); text-shadow:0 0 40px rgba(201,168,76,0.2); margin-bottom:16px; }
@@ -168,7 +166,7 @@
     <p class="hero-desc">Conjuring scalable data pipelines with Databricks, Snowflake & PySpark. Transforming raw data into golden insights — one spell at a time.</p>
     <div class="hero-cta">
       <a href="#projects" class="btn-spell btn-primary">View Spellbook</a>
-      <a href="/cdn-cgi/l/email-protection#177c657e637e67657e6e7626262e57707a767e7b3974787a" class="btn-spell">Send Owl Post</a>
+      <a href="mailto:kritipriya119@gmail.com" class="btn-spell">Send Owl Post</a>
     </div>
     <div class="house-points">
       <div class="house-gem"><div class="gem-icon">⚗️</div><div class="gem-num">1.5+</div><div class="gem-label">Years of Magic</div></div>
@@ -266,9 +264,9 @@
   <div class="section-eyebrow">Academic Records</div>
   <h2 class="section-title">O.W.L.s & N.E.W.T.s</h2>
   <div class="owls-grid">
-    <a href="https://credentials.databricks.com/dd0516f7-7150-4c81-9be3-c1751d81df58#acc.ZI1vesAy" target="_blank" class="owl-result" style="text-decoration:none"><div class="owl-seal">🔶</div><div><div class="owl-title">Databricks Certified Data Engineer Associate</div><div class="owl-issuer">Issued by the Databricks Academy</div><span class="owl-link">🔗 View Certificate →</span></div></a>
-    <a href="https://achieve.snowflake.com/f5d76bcc-1170-42de-986e-3f54abe4747e#acc.smq2TNCR" target="_blank" class="owl-result" style="text-decoration:none"><div class="owl-seal">❄️</div><div><div class="owl-title">SnowPro Core Certification</div><div class="owl-issuer">Issued by the Snowflake Guild</div><span class="owl-link">🔗 View Certificate →</span></div></a>
-    <a href="https://drive.google.com/file/d/166aD-i8VKSp193klbV49gQZK-ezBfZ5W/view?usp=drive_link" target="_blank" class="owl-result" style="text-decoration:none"><div class="owl-seal">☁️</div><div><div class="owl-title">Oracle Certified Foundations Associate</div><div class="owl-issuer">Issued by Oracle Order</div><span class="owl-link">🔗 View Certificate →</span></div></a>
+    <div class="owl-result"><div class="owl-seal">🔶</div><div><div class="owl-title">Databricks Certified Data Engineer Associate</div><div class="owl-issuer">Issued by the Databricks Academy</div></div></div>
+    <div class="owl-result"><div class="owl-seal">❄️</div><div><div class="owl-title">SnowPro Core Certification</div><div class="owl-issuer">Issued by the Snowflake Guild</div></div></div>
+    <div class="owl-result"><div class="owl-seal">☁️</div><div><div class="owl-title">Oracle Certified Foundations Associate</div><div class="owl-issuer">Issued by Oracle Order</div></div></div>
   </div>
 </section>
 
@@ -277,7 +275,7 @@
   <h2 class="contact-title">Send an Owl 🦉</h2>
   <p class="contact-spell">"Accio opportunity!" — Open to Data Engineer roles</p>
   <div class="contact-links">
-    <a href="/cdn-cgi/l/email-protection#68031a011c01181a011109595951280f05090104460b0705" class="contact-link">📧 Owl Mail</a>
+    <a href="mailto:kritipriya119@gmail.com" class="contact-link">📧 Owl Mail</a>
     <a href="https://linkedin.com/in/kritipriya" target="_blank" class="contact-link">🪄 LinkedIn</a>
     <a href="https://github.com/11kriti" target="_blank" class="contact-link">📚 GitHub Grimoire</a>
   </div>
@@ -288,7 +286,7 @@
   <p>Mischief Managed 🗺️</p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   const wand = document.getElementById('wand');
   const trail = document.getElementById('trail');
   let mx=0,my=0,tx=0,ty=0;
@@ -341,4 +339,9 @@
 
   // Reveal
   const observer=new IntersectionObserver((entries)=>{
-    entries.forEach((e,i)=>{ if(e.isIntersecting) setTimeout(()=>e.target.clas
+    entries.forEach((e,i)=>{ if(e.isIntersecting) setTimeout(()=>e.target.classList.add('visible'),i*120); });
+  },{threshold:0.1});
+  document.querySelectorAll('.exp-item,.project-scroll,.potion-bottle,.owl-result').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
